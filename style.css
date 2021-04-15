@@ -1,0 +1,302 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Kiwi Maru", serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem 0 2rem;
+  width: 100%;
+  position: fixed;
+  flex-wrap: wrap;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+@media screen and (max-width: 1240px) {
+  header {
+    flex-direction: column;
+    justify-content: left;
+  }
+}
+header h1 {
+  font-family: "Dela Gothic One", cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: white;
+}
+@media screen and (max-width: 1240px) {
+  header h1 {
+    font-size: 2;
+    margin-bottom: 0.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 1rem;
+  }
+}
+header nav ul {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1240px) {
+  header nav ul {
+    flex-direction: column;
+    margin-bottom: 1rem;
+    justify-content: left;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 1240px) {
+  header nav ul li {
+    padding: 0.5rem 0 0rem 0;
+  }
+}
+header nav ul li a {
+  color: white;
+  font-size: 1.4rem;
+}
+@media screen and (max-width: 1240px) {
+  header nav ul li a {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  header nav ul li a {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 300px) {
+  header nav ul li a {
+    font-size: 1rem;
+  }
+}
+header nav ul li a:hover {
+  border-bottom: 2px solid white;
+}
+header nav ul li + li {
+  margin-left: 2rem;
+}
+@media screen and (max-width: 1240px) {
+  header nav ul li + li {
+    margin-left: 0;
+  }
+}
+header section a {
+  color: white;
+}
+header section a + a {
+  margin-left: 1rem;
+}
+
+.content__one {
+  width: 100%;
+  height: 100vh;
+  background: url(./assets/img/topone.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: "Dela Gothic One", cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  position: relative;
+}
+@media screen and (max-width: 1240px) {
+  .content__one {
+    width: 100%;
+    height: 100vh;
+    background: url(./assets/img/mobileattack.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: "Dela Gothic One", cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    position: relative;
+  }
+}
+.content__one h2 {
+  font-size: 2.5rem;
+  margin-top: 15rem;
+  font-family: "Dela Gothic One", cursive;
+  color: white;
+}
+.content__one a {
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.content__one a:hover {
+  background-color: #bbb1b1;
+}
+.content__two {
+  width: 100%;
+  height: 100vh;
+  background: url(./assets/img/toptwo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: "Dela Gothic One", cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  position: relative;
+}
+@media screen and (max-width: 1240px) {
+  .content__two {
+    width: 100%;
+    height: 100vh;
+    background: url(./assets/img/mobileerased.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: "Dela Gothic One", cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    position: relative;
+  }
+}
+.content__two h2 {
+  font-size: 2.5rem;
+  margin-top: 15rem;
+  font-family: "Dela Gothic One", cursive;
+  color: white;
+}
+.content__two a {
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.content__two a:hover {
+  background-color: #bbb1b1;
+}
+.content__tree {
+  width: 100%;
+  height: 100vh;
+  background: url(./assets/img/toptree.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: "Dela Gothic One", cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  position: relative;
+}
+.content__tree h2 {
+  font-size: 2.5rem;
+  margin-top: 15rem;
+  font-family: "Dela Gothic One", cursive;
+  color: white;
+}
+.content__tree a {
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.content__tree a:hover {
+  background-color: #bbb1b1;
+}
+.content__four {
+  width: 100%;
+  height: 100vh;
+  background: url(./assets/img/topfour.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: "Dela Gothic One", cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  position: relative;
+}
+.content__four h2 {
+  font-size: 2.5rem;
+  margin-top: 15rem;
+  font-family: "Dela Gothic One", cursive;
+  color: white;
+}
+.content__four a {
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.content__four a:hover {
+  background-color: #bbb1b1;
+}
+.content__five {
+  width: 100%;
+  height: 100vh;
+  background: url(./assets/img/topfive.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: "Dela Gothic One", cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  position: relative;
+}
+.content__five h2 {
+  font-size: 2.5rem;
+  margin-top: 15rem;
+  font-family: "Dela Gothic One", cursive;
+  color: white;
+}
+.content__five a {
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.content__five a:hover {
+  background-color: #bbb1b1;
+}
+
+/*# sourceMappingURL=style.css.map */

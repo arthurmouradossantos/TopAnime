@@ -1,0 +1,206 @@
+@mixin content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+@mixin tamanho_section($image) {
+  width: 100%;
+  height: 100vh;
+  background: $image;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: "Dela Gothic One", cursive;
+  @include content;
+  text-align: center;
+  position: relative;
+}
+
+@mixin device {
+  @media screen and (max-width: 1240px) {
+    @content;
+  }
+}
+
+@mixin deviceM {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin deviceP {
+  @media screen and (max-width: 300px) {
+    @content;
+  }
+}
+
+@mixin button {
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  &:hover {
+    background-color: rgb(187, 177, 177);
+  }
+}
+@mixin title {
+  font-size: 2.5rem;
+  margin-top: 15rem;
+  font-family: "Dela Gothic One", cursive;
+  color: white;
+}
+
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Kiwi Maru", serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem 0 2rem;
+  width: 100%;
+  position: fixed;
+  flex-wrap: wrap;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.75);
+
+  @include device {
+    flex-direction: column;
+    justify-content: left;
+  }
+
+  h1 {
+    font-family: "Dela Gothic One", cursive;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: white;
+    @include device {
+      font-size: 2;
+      margin-bottom: 0.5rem;
+    }
+
+    @include deviceM {
+      font-size: 1rem;
+    }
+  }
+
+  & nav ul {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+
+    @include device {
+      flex-direction: column;
+      margin-bottom: 1rem;
+      justify-content: left;
+      align-items: center;
+    }
+
+    li {
+      @include device {
+        padding: 0.5rem 0 0rem 0;
+      }
+      a {
+        color: white;
+        font-size: 1.4rem;
+        @include device {
+          font-size: 1.5rem;
+        }
+
+        @include deviceM {
+          font-size: 1.2rem;
+        }
+
+        @include deviceP {
+          font-size: 1rem;
+        }
+        &:hover {
+          border-bottom: 2px solid white;
+        }
+      }
+    }
+
+    li + li {
+      margin-left: 2rem;
+      @include device {
+        margin-left: 0;
+      }
+    }
+  }
+  section {
+    a {
+      color: white;
+      & + a {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+.content {
+  &__one {
+    @include tamanho_section(url(./assets/img/topone.png));
+    @include device {
+      @include tamanho_section(url(./assets/img/mobileattack.png));
+    }
+    h2 {
+      @include title;
+    }
+    a {
+      @include button;
+    }
+  }
+  &__two {
+    @include tamanho_section(url(./assets/img/toptwo.png));
+    @include device {
+      @include tamanho_section(url(./assets/img/mobileerased.png));
+    }
+    h2 {
+      @include title;
+    }
+    a {
+      @include button;
+    }
+  }
+  &__tree {
+    @include tamanho_section(url(./assets/img/toptree.png));
+
+    h2 {
+      @include title;
+    }
+    a {
+      @include button;
+    }
+  }
+  &__four {
+    @include tamanho_section(url(./assets/img/topfour.jpg));
+    h2 {
+      @include title;
+    }
+    a {
+      @include button;
+    }
+  }
+  &__five {
+    @include tamanho_section(url(./assets/img/topfive.png));
+    h2 {
+      @include title;
+    }
+    a {
+      @include button;
+    }
+  }
+}
